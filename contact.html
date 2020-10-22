@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Austin Cornell | Contact Me</title>
+
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cantarell">
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@700&display=swap" rel="stylesheet">
+<!--Set Icon-->
+<link rel="icon" href="images/austinLogoBlack.png">
+<!--Import materialize.css-->
+<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+<link rel="stylesheet" href="index.css"/>
+
+<!--Let browser know website is optimized for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+<!--Navbar-->
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper red darken-4 z-depth-4">
+        <a class="brand-logo" href="index.html" style="text-transform: none">
+          <div class="text">
+            <div class="typewrite" data-period="2000" data-type='[ "Austin Cornell", "Informatics", "Business", "Computer Science" ]' style="font-family: 'Source Code Pro', monospace; font-size: min(4vw,28px); "></div>
+          </div>
+        </a>
+		<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="education.html" class="hvr-underline-from-center"><i class="material-icons left">local_library</i>education</a></li>
+        <li><a href="work_history.html" class="hvr-underline-from-center"><i class="material-icons left">info</i>about me</a></li>
+        <li><a href="work_history.html" class="hvr-underline-from-center"><i class="material-icons left">mode_edit</i>work history</a></li>
+        <li><a href="contact.html" class="hvr-pulse waves-effect waves-red btn white red-text text-darken-4"><i class="material-icons left">email</i>contact me</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<ul class="sidenav" id="mobile-demo">
+	<li><a class="hvr-underline-from-center-red" href="index.html"><i class="material-icons left">home</i>home</a></li>
+<li><a class="hvr-underline-from-center-red" href="education.html"><i class="material-icons left">local_library</i>education</a></li>
+        <li><a class="hvr-underline-from-center-red" href="about.html"><i class="material-icons left">info</i>about me</a></li>
+        <li><a class="hvr-underline-from-center-red" href="work_history.html"><i class="material-icons left">mode_edit</i>work history</a></li>
+        <li class="white-text"><a href="contact.html" class="hvr-pulse white-text waves-effect waves-red btn red darken-4">contact me</a></li>
+  </ul>
+
+<!--Body of webpage-->
+<div class="section white">
+  <div class="row container ">
+    <div class="col s12 m12">
+      <h2 class="header">Let's get in touch.</h2>
+		<hr/>
+      <p class="grey-text text-darken-3"><b>I know, I know... </b>You might want to contact me after seeing some of the epic photos on this site. I'll have you know, I once applied to be a model (<i>they declined me for being too good looking</i>). Nonetheless, drop your contact information here and we can get in touch if you don't already have my email!</p>
+    </div>
+
+  </div>
+
+  <div class="container">
+
+  <div class="row">
+    <form class="col s12" action="sendemail.php" method="POST">
+      <div class="row">
+        <div class="input-field col s12 m6">
+            <i class="material-icons prefix">account_circle</i>
+          <input placeholder="John Deer" id="name" type="text" class="validate" name="fullname">
+          <label for="name">Your Name</label>
+          <span class="helper-text" data-error="This name doesn't seem quite right..." data-success="You have a nice name."></span>
+        </div>
+        <div class="input-field col s12 m6">
+            <i class="material-icons prefix">location_city</i>
+          <input placeholder="Mega-corporation"id="company" type="text" class="validate" name="company">
+          <label for="company">Your Company or Affiliation</label>
+          <span class="helper-text" data-error="This company seems a little wonky..." data-success="Interesting company..."></span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+            <i class="material-icons prefix">mail_outline</i>
+          <input placeholder="john-deer@megacorporation.net" id="email" type="email" class="validate" name="email">
+          <label for="email">Your Email (don't worry, I won't spam you...)</label>
+          <span class="helper-text" data-error="This email doesn't seem quite right..." data-success="That's a good looking email."></span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+            <i class="material-icons prefix">message</i>
+          <textarea placeholder="This is a story, all about how..." id="textarea1" class="materialize-textarea" name="response"></textarea>
+          <label for="textarea1">Let me know what's up</label><span class="helper-text" data-error="This email doesn't seem quite right..." data-success="That's a good looking email."></span>
+        </div>
+      </div>
+
+
+      <div class="row">
+          <div class="input-field col s12">
+              <center>
+              <button name="submitButton" type="submit" class="hvr-pulse waves-effect waves-red btn red darken-4 white-text"><b>SUBMIT</b></button>
+          </center>
+          </div>
+      </div>
+    </form>
+
+  </div>
+  </div>
+
+</div>
+<!--Extra Scripts-->
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script src="js/animate.js"></script>
+<script>
+	 document.addEventListener('DOMContentLoaded', function() {
+	var elems4 = document.querySelectorAll('.sidenav');
+    var instances4 = M.Sidenav.init(elems4);
+    var elems = document.querySelectorAll('.materialboxed');
+    var instances = M.Materialbox.init(elems);
+	var elems2 = document.querySelectorAll('.collapsible');
+    var instances2 = M.Collapsible.init(elems2);
+	var elems3 = document.querySelectorAll('.modal');
+    var instances3 = M.Modal.init(elems3);
+    var elems5 = document.querySelectorAll('.slider');
+    var instances5 = M.Slider.init(elems5);
+  });
+
+
+	</script>
+
+</body>
+</html>
