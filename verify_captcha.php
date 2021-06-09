@@ -1,8 +1,9 @@
 <?php
 session_start();
   if(!empty($_POST['g-recaptcha-response']))
-  {
-        $secret = '6Le18dEZAAAAAMkq771Zl2UHWQsuhz14eh1al5jl';
+  {     
+        require_once 'private_info.php';
+        $secret = SECRET_KEY;
         $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$_POST['g-recaptcha-response']);
         $responseData = json_decode($verifyResponse);
         if($responseData->success){
